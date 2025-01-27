@@ -1,0 +1,21 @@
+includes:
+  - base.yaml
+model:
+  model_name: GDGMTvGIN #
+ood:
+  ood_alg: BrainOOD
+  ood_param: 0.0    # info loss coefficient
+  trade_off: 0.1    # trade-off coefficient
+  diffusion_trade_off: 0.5
+  entropy_trade_off: 0.01
+  feature_dropout: 0.2
+  extra_param:
+    - "bern"    # sampling method
+    - 20      # decay_interval
+    - 0.7     # final_r
+    - 5     # sample_rounds
+train:
+  max_epoch: 50
+  lr: 2e-3 #2e-3
+
+
